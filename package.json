@@ -6,14 +6,19 @@
   "type": "module",
   "scripts": {
     "prebuild": "node sync-style.js",
-    "dev": "vite",
-    "build": "vite build",
+    "gen": "node scripts/build.js",
+    "dev": "npm run gen && vite",
+    "build": "npm run gen && vite build",
     "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "front-matter": "^4.0.2",
+    "glob": "^13.0.0",
+    "marked": "^17.0.1",
+    "prettier": "^3.7.4",
     "vite": "^7.2.7"
   }
 }

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}} | 知命达理容易斋</title>
+    <meta
+      name="description"
+      content="{{description}}"
+    />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-logo.png" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="article-page">
+    <header class="top-nav">
+      <div class="brand">
+        <img src="/images/logo/logo.png" alt="知命达理容易斋标志" class="brand-logo" />
+        <a href="/" aria-label="返回首页">知命达理容易斋</a>
+      </div>
+      <nav aria-label="主导航">
+        <a href="/">首页</a>
+        <a href="/#articles">文章</a>
+        <a href="/#services">服务</a>
+        <a href="/#contact">联系</a>
+      </nav>
+    </header>
+
+    <main class="article-main">
+      <section class="article-hero">
+        <div class="container">
+          <nav class="article-breadcrumb" aria-label="面包屑导航">
+            <a href="/">首页</a>
+            <span>·</span>
+            <a href="/#articles">文章</a>
+            <span>·</span>
+            <span aria-current="page">{{title}}</span>
+          </nav>
+          <p class="eyebrow">公众号精华 · 易学入门</p>
+          <h1>{{title}}</h1>
+          <div class="article-meta">
+            <span>{{date}}</span>
+            <span class="dot">•</span>
+            <span>{{category}}</span>
+          </div>
+          <img
+            src="{{cover_image}}"
+            alt="{{title}} 插画"
+            class="article-cover-large"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section class="article-content">
+        <div class="container narrow">
+          {{content}}
+          
+          <div class="article-cta">
+            <p>想根据你的兴趣与问题选入口？欢迎联系，我给你定制一条学习路径。</p>
+            <a class="btn primary" href="/#contact">联系与预约</a>
+          </div>
+
+          <div class="article-related" aria-label="相关文章">
+            <h3>更多相关文章</h3>
+            <ul>
+              {{related_links}}
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

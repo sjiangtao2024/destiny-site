@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: sjiangtao2024/destiny-site
+  branch: main
+  base_url: https://rongyizhai.de5.net/oauth
+
+# 图片存储配置
+media_folder: "public/images/articles"
+public_folder: "/images/articles"
+
+# 本地测试时使用（上线时 CMS 会自动忽略这个，除非手动开启）
+local_backend: true
+
+collections:
+  - name: "articles"
+    label: "文章"
+    folder: "content/articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "分类", name: "category", widget: "select", options: ["易学入门", "读易明理", "兴趣驱动", "案例分析", "随笔"]}
+      - {label: "简介", name: "description", widget: "text", hint: "显示在文章列表卡片上的简短介绍"}
+      - {label: "封面图", name: "cover_image", widget: "image"}
+      - {label: "正文", name: "body", widget: "markdown"}
